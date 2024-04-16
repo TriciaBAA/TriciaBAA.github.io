@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/TechnicalDocumentationPage/styles/styles.css" />
+    <script type="text/javascript" src="/TechnicalDocumentationPage/script/script.js" charset="UTF-8"></script>
+    <title>CSS Flexbox Documentation</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>CSS Flexbox</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#Flex_Container">Flex Container</a></li>
+        <li><a class="nav-link" href="#Flex_Items">Flex Items</a></li>
+        <li><a class="nav-link" href="#Flex_Direction">Flex Direction</a></li>
+        <li><a class="nav-link" href="#Justify_Content">Justify Content</a></li>
+        <li><a class="nav-link" href="#Align_Items">Align Items</a></li>
+        <li><a class="nav-link" href="#Align_Content">Align Content</a></li>
+        <li><a class="nav-link" href="#Flex_Grow">Flex Grow</a></li>
+        <li><a class="nav-link" href="#Flex_Shrink">Flex Shrink</a></li>
+        <li><a class="nav-link" href="#Flex_Basis">Flex Basis</a></li>
+        <li><a class="nav-link" href="#Flex">Flex</a></li>
+        <li><a class="nav-link" href="#Order">Order</a></li>
+        <li><a class="nav-link" href="#Align_Self">Align Self</a></li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction to CSS Flexbox</header>
+        <article>
+          <p>
+            CSS Flexible Box Layout, commonly known as Flexbox, is a layout
+            model designed for the arrangement of elements in a responsive and
+            efficient way in one dimension, either horizontally or vertically.
+          </p>
+          <p>
+            Flexbox provides an efficient way to layout, align, and distribute
+            space among items in a container even when their size is unknown or
+            dynamic. It is particularly useful in creating complex layouts and
+            aligning elements within a container.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Flex_Container">
+        <header>Flex Container</header>
+        <article>
+          <p>
+            In Flexbox, the container is referred to as the flex container, and
+            its direct children as flex items. To enable Flexbox layout for an
+            element, you need to set its display property to <code>flex</code>
+            or <code>inline-flex</code>.
+          </p>
+          <p>
+            For example, to create a flex container, you can use the following
+            CSS:
+          </p>
+          <code>
+            .flex-container &#123; display: flex; &#125;
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Flex_Items">
+        <header>Flex Items</header>
+        <article>
+          <p>
+            Flex items are the immediate children of a flex container. They are
+            laid out along the main axis of the flex container. By default,
+            flex items will try to fit into a single line, but they can also
+            wrap onto multiple lines if needed.
+          </p>
+          <p>
+            To define an element as a flex item, you don't need to use any
+            additional CSS. Any direct child of a flex container becomes a flex
+            item automatically.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Flex_Direction">
+        <header>Flex Direction</header>
+        <article>
+          <p>
+            Flex direction determines the primary axis of the flex container,
+            along which flex items are laid out. It can be set to
+            <code>row</code>, <code>row-reverse</code>,
+            <code>column</code>, or <code>column-reverse</code>.
+          </p>
+          <p>
+            For example, to create a flex container with a column layout, you
+            can use the following CSS:
+          </p>
+          <code>
+            .flex-container &#123; display: flex; flex-direction: column; &#125;
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Justify_Content">
+        <header>Justify Content</header>
+        <article>
+          <p>
+            Justify content defines how flex items are aligned along the main
+            axis of the flex container. It can be used to distribute space
+            between and around flex items.
+          </p>
+          <p>
+            Common values for justify content include <code>flex-start</code>,
+            <code>flex-end</code>, <code>center</code>, <code>space-between</code>,
+            and <code>space-around</code>.
+          </p>
+          <p>
+            For example, to justify content to the center within a flex
+            container, you can use the following CSS:
+          </p>
+          <code>
+            .flex-container &#123; display: flex; justify-content: center; &#125;
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Align_Items">
+        <header>Align Items</header>
+        <article>
+          <p>
+            Align items defines how flex items are aligned along the cross axis
+            of the flex container. It can be used to align items at the start,
+            end, center, or stretch them to fill the container.
+          </p>
+          <p>
+            Common values for align items include <code>flex-start</code>,
+            <code>flex-end</code>, <code>center</code>, <code>baseline</code>,
+            and <code>stretch</code>.
+          </p>
+          <p>
+            For example, to align items to the center vertically within a flex
+            container, you can use the following CSS:
+          </p>
+          <code>
+            .flex-container &#123; display: flex; align-items: center; &#125;
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Align_Content">
+        <header>Align Content</header>
+        <article>
+          <p>
+            Align content defines how multiple lines of flex items are aligned
+            along the cross axis of the flex container. It only has effect when
+            flex items wrap onto multiple lines.
+          </p>
+          <p>
+            Common values for align content include <code>flex-start</code>,
+            <code>flex-end</code>, <code>center</code>, <code>space-between</code>,
+            <code>space-around</code>, and <code>stretch</code>.
+          </p>
+          <p>
+            For example, to align content to the center vertically within a flex
+            container with wrapping enabled, you can use the following CSS:
+          </p>
+          <code>
+            .flex-container &#123; display: flex; flex-wrap: wrap; align-content: center; &#125;
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Flex_Grow">
+        <header>Flex Grow</header>
+        <article>
+          <p>
+            Flex grow determines how much a flex item grows relative to other
+            flex items in the flex container when there's extra space available.
+            It's specified using a unitless value, which represents the
+            proportion of the available space the flex item should take up.
+          </p>
+          <p>
+            By default, flex grow is set to 0, meaning flex items won't grow.
+            Setting it to 1 makes the item grow to fill the available space.
+          </p>
+          <p>
+            For example, to make a flex item grow relative to others, you can
+            use the following CSS:
+          </p>
+          <code>
+            .flex-item &#123; flex-grow: 1; &#125;
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Flex_Shrink">
+        <header>Flex Shrink</header>
+        <article>
+          <p>
+            Flex shrink determines how much a flex item shrinks relative to
+            other flex items when there's not enough space available. It's
+            specified using a unitless value, which represents the proportion
+            of the available space to distribute among the flex items.
+          </p>
+          <p>
+            By default, flex shrink is set to 1, allowing flex items to shrink
+            proportionally. Setting it to 0 prevents the item from shrinking.
+          </p>
+          <p>
+            For example, to prevent a flex item from shrinking, you can use the
+            following CSS:
+          </p>
+          <code>
+            .flex-item &#123; flex-shrink: 0; &#125;
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Flex_Basis">
+        <header>Flex Basis</header>
+        <article>
+          <p>
+            Flex basis defines the initial size of a flex item before
+            distributing the remaining space. It can be set as a length value
+            such as pixels or percentages, or as the keyword <code>auto</code>
+            to use the item's natural size.
+          </p>
+          <p>
+            By default, flex basis is set to <code>auto</code>, meaning the
+            browser calculates the size based on the content.
+          </p>
+          <p>
+            For example, to set the initial size of a flex item, you can use
+            the following CSS:
+          </p>
+          <code>
+            .flex-item &#123; flex-basis: 100px; &#125;
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Flex">
+        <header>Flex</header>
+        <article>
+          <p>
+            Flex is a shorthand property for setting the flex grow, flex shrink,
+            and flex basis properties in one declaration. It allows you to
+            specify how a flex item will grow, shrink, and behave in relation
+            to the other flex items in the flex container.
+          </p>
+          <p>
+            The values for the <code>flex</code> property are as follows:
+            <code>flex-grow</code>, <code>flex-shrink</code>, and
+            <code>flex-basis</code>.
+          </p>
+          <p>
+            For example, to set the flex properties for a flex item, you can
+            use the following CSS:
+          </p>
+          <code>
+            .flex-item &#123; flex: 1 0 auto; &#125;
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Order">
+        <header>Order</header>
+        <article>
+          <p>
+            Order determines the order in which flex items appear within the
+            flex container, regardless of their source order in the HTML. It's
+            specified using an integer value, where lower values come first.
+          </p>
+          <p>
+            By default, flex items have an order of 0, meaning they appear in
+            the source order. Negative values are allowed.
+          </p>
+          <p>
+            For example, to change the order of a flex item, you can use the
+            following CSS:
+          </p>
+          <code>
+            .flex-item &#123; order: 2; &#125;
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Align_Self">
+        <header>Align Self</header>
+        <article>
+          <p>
+            Align self allows you to override the align items property for
+            individual flex items within the flex container. It's used to
+            control the alignment of a single flex item along the cross axis.
+          </p>
+          <p>
+            Common values for align self are the same as align items:
+            <code>flex-start</code>, <code>flex-end</code>, <code>center</code>,
+            <code>baseline</code>, and <code>stretch</code>.
+          </p>
+          <p>
+            For example, to align a specific flex item to the end within a flex
+            container, you can use the following CSS:
+          </p>
+          <code>
+            .flex-item &#123; align-self: flex-end; &#125;
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <p>
+            For more detailed information on CSS Flexbox, you can refer to the
+            following resources:
+          </p>
+          <ul>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox"
+                >MDN Web Docs: Basic Concepts of Flexbox</a
+              >
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-flexbox-1/">W3C CSS Flexbox Specification</a>
+            </li>
+            <li>
+              <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+                >CSS-Tricks: A Complete Guide to Flexbox</a
+              >
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
